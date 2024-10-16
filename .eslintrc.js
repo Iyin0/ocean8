@@ -3,5 +3,6 @@ module.exports = {
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-unused-vars': 'error',
+    'indent': ['error', 2],
   },
 };
