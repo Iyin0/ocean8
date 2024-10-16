@@ -1,26 +1,23 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { ConvexClientProvider } from "./ConvexClientProvider";
-import {
-  SignedOut,
-  SignedIn,
-} from "@clerk/nextjs";
-import "./globals.css";
-import AuthCheck from "./AuthCheck";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import { ConvexClientProvider } from './ConvexClientProvider';
+import { SignedOut, SignedIn } from '@clerk/nextjs';
+import './globals.css';
+import AuthCheck from './AuthCheck';
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+  src: './fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
 });
 
 export const metadata: Metadata = {
-  title: "Ocean8",
-  description: "Ocean8",
+  title: 'Ocean8',
+  description: 'Ocean8',
 };
 
 export default function RootLayout({
@@ -35,13 +32,9 @@ export default function RootLayout({
       >
         <ConvexClientProvider>
           <SignedIn>
-            <AuthCheck>
-              {children}
-            </AuthCheck>
+            <AuthCheck>{children}</AuthCheck>
           </SignedIn>
-          <SignedOut>
-            {children}
-          </SignedOut>
+          <SignedOut>{children}</SignedOut>
         </ConvexClientProvider>
       </body>
     </html>

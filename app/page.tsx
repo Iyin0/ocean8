@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
-import { UserButton } from "@clerk/clerk-react";
+import { useQuery } from 'convex/react';
+import { api } from '@convex/_generated/api';
+import { UserButton } from '@clerk/clerk-react';
 
 export default function Home() {
   const tasks = useQuery(api.tasks.get);

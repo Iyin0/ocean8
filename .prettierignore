@@ -1,0 +1,28 @@
+# Ignore Next.js build output
+.next/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore Convex generated files
+convex/_generated/
+
+# Ignore Husky configuration
+.husky/
+
+# Ignore specific config files
+next.config.js
+postcss.config.js
+tailwind.config.ts
+
+# Ignore pnpm lock file
+pnpm-lock.yaml
+
+# Ignore markdown files
+*.md
+
+# Ignore environment files
+.env*
+
+# Ignore TypeScript declaration files
+*.d.ts
