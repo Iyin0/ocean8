@@ -26,3 +26,6 @@ pnpm-lock.yaml
 
 # Ignore TypeScript declaration files
 *.d.ts
+
+*.gitignore
+*.prettierignore

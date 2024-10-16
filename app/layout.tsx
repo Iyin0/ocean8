@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ConvexClientProvider } from './ConvexClientProvider';
-import { SignedOut, SignedIn } from '@clerk/nextjs';
 import './globals.css';
-import AuthCheck from './AuthCheck';
+
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -27,15 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
-      >
-        <ConvexClientProvider>
-          <SignedIn>
-            <AuthCheck>{children}</AuthCheck>
-          </SignedIn>
-          <SignedOut>{children}</SignedOut>
-        </ConvexClientProvider>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
   );

@@ -10,9 +10,12 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <UserButton />
-      {tasks?.map(({ _id, text }) => (
+      {tasks?.map(({ _id, title, description, due_date, status }) => (
         <div key={_id} className="text-black">
-          {text}
+          <p>{title}</p>
+          <p>{description}</p>
+          <p>{due_date}</p>
+          <p>{status}</p>
         </div>
       ))}
     </main>

@@ -23,7 +23,6 @@ module.exports = {
   rules: {
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'no-unused-vars': 'error',
-    'indent': ['error', 2],
     'import/no-unresolved': 'error',
     'prettier/prettier': 'error',
     'import/prefer-default-export': 'off',
