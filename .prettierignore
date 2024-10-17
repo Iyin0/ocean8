@@ -10,11 +10,6 @@ convex/_generated/
 # Ignore Husky configuration
 .husky/
 
-# Ignore specific config files
-next.config.js
-postcss.config.js
-tailwind.config.ts
-
 # Ignore pnpm lock file
 pnpm-lock.yaml
 
@@ -29,3 +24,4 @@ pnpm-lock.yaml
 
 *.gitignore
 *.prettierignore
+*.lintstagedrc.cjs
