@@ -29,3 +29,7 @@ pnpm-lock.yaml
 
 *.gitignore
 *.prettierignore
+.eslintrc.js
+.prettierrc.js
+components.json
+package.json
